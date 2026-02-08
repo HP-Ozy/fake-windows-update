@@ -2,17 +2,32 @@
 
 
 
-💻 Fake Windows Update
+# 💻 Fake Windows Update
+
 Schermata finta di aggiornamento Windows. Avviala sul PC di un amico e goditi il panico.
-Cosa fa?
+
+## Cosa fa?
 Schermo intero, blu Windows, percentuale che sale piano piano, cursore sparito. Sembra vero.
-Installazione
+
+## Installazione
+```
 pip install pygame
-Avvio
+```
+
+## Avvio
+```
 python fakeupdateWindows.py
-Come si esce?
-F4. Non dirlo a nessuno 🤫
-Vuoi l'exe?
+```
+
+## Come si esce?
+**F4**. Non dirlo a nessuno 🤫
+
+## Vuoi l'exe?
+```
 pip install pyinstaller
 pyinstaller --onefile --noconsole fakeupdateWindows.py
-Trovi il .exe in dist/. Così non serve neanche Python.
+```
+Trovi il `.exe` in `dist/`. Così non serve neanche Python.
+
+---
+È uno scherzo, non fate i cattivi ⚠️
