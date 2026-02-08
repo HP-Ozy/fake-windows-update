@@ -77,7 +77,7 @@ while running:
                 running = False
             
             if event.key == pygame.K_ESCAPE:
-                pass  # non fa niente
+                pass  
 
     
     if elapsed - (last_phase_change - start_time) > random.uniform(6, 12):
@@ -86,21 +86,21 @@ while running:
 
     if percentage < 99:
         speed = random.uniform(0.01, 0.15)
-        # Rallenta vicino a certi numeri
+        
         if int(percentage) in [29, 30, 47, 48, 71, 72, 84, 85, 92, 93]:
             speed *= 0.02
         percentage = min(percentage + speed, 99.0)
 
-    # ---- RENDERING ----
+    
     screen.fill(BG_COLOR)
 
-    # Percentuale grande al centro
+    
     pct_text = f"{int(percentage)}%"
     pct_surface = font_big.render(pct_text, True, WHITE)
     pct_rect = pct_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 60))
     screen.blit(pct_surface, pct_rect)
 
-    # Cerchio di caricamento
+    
     draw_loading_circle(
         screen,
         (WIDTH // 2, HEIGHT // 2 - 60),
@@ -110,16 +110,16 @@ while running:
         color=WHITE,
     )
 
-    # Testo della fase corrente
+    
     phase_text = phases[phase]
     phase_surface = font_medium.render(phase_text, True, WHITE)
     phase_rect = phase_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 50))
     screen.blit(phase_surface, phase_rect)
 
-    # Dots animati
+    
     draw_loading_dots(screen, WIDTH // 2, HEIGHT // 2 + 95, elapsed)
 
-    # Avviso in basso
+    
     warn_text = "Non spegnere il computer. L'operazione potrebbe richiedere alcuni minuti."
     warn_surface = font_small.render(warn_text, True, LIGHT_BLUE)
     warn_rect = warn_surface.get_rect(center=(WIDTH // 2, HEIGHT - 80))
